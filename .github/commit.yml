@@ -1,0 +1,15 @@
+name: Deploy the app to Github Pages
+
+on:
+    push:
+        branches:
+            - main
+
+
+jobs:
+    deploy:
+        steps:
+            - name: GitHub Pages
+              uses: crazy-max/ghaction-github-pages@v4.0.0
+              with:
+                  target_branch: master
