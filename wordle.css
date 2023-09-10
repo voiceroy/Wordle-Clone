@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter");
+@import url("https://fonts.googleapis.com/css2?family=Roboto");
+
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #303030;
+}
+
+h1 {
+    margin-top: 0;
+    padding-bottom: 15px;
+    font-family: "Inter";
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    border-bottom: 3px black solid;
+    justify-content: center;
+    align-items: center;
+}
+
+.trial {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+    column-gap: 10px;
+}
+
+.letter {
+    width: 80px;
+    height: 80px;
+    margin: 0;
+    border: 5px black solid;
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 40px;
+    text-transform: uppercase;
+    background-color: white;
+}
