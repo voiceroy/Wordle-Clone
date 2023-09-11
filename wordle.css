@@ -1,42 +1,124 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter");
+@import url("https://rsms.me/inter/inter.css");
 @import url("https://fonts.googleapis.com/css2?family=Roboto");
 
 * {
     box-sizing: border-box;
 }
+
 body {
-    background-color: #303030;
+    margin: 0;
+    padding: 0;
+    background-color: #f0e9d6;
 }
 
-h1 {
-    margin-top: 0;
-    padding-bottom: 15px;
+.navbar {
+    border-bottom: 3px solid black;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.brand {
     font-family: "Inter";
     font-size: 48px;
     font-weight: bold;
-    text-align: center;
-    display: flex;
-    border-bottom: 3px black solid;
-    justify-content: center;
-    align-items: center;
+    margin: 0;
+    padding: 15px;
 }
 
-.trial {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 10px;
-    column-gap: 10px;
+.wordle-game {
+    display: grid;
+    max-width: 420px;
+    width: 100%;
+    margin: 10px auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 5px;
 }
 
 .letter {
     width: 80px;
     height: 80px;
-    margin: 0;
-    border: 5px black solid;
-    text-align: center;
+    display: flex;
     font-family: "Roboto";
     font-size: 40px;
     text-transform: uppercase;
+    border: 5px black solid;
+    align-items: center;
     background-color: white;
+    justify-content: center;
+}
+
+.correct {
+    background-color: darkgreen;
+    color: white;
+}
+
+.close {
+    background-color: goldenrod;
+    color: white;
+}
+
+.wrong {
+    background-color: red;
+    color: white;
+}
+
+.invalid {
+    animation: invalid 0.5s linear infinite;
+}
+
+@keyframes invalid {
+    0% {
+        transform: translate(2px, 0px);
+    }
+    20% {
+        transform: translate(-2px, 0px);
+    }
+    40% {
+        transform: translate(2px, 0px);
+    }
+    60% {
+        transform: translate(-2px, 0px);
+    }
+    80% {
+        transform: translate(2px, 0px);
+    }
+    100% {
+        transform: translate(-2px, 0px);
+    }
+}
+
+.indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dot {
+    font-family: "Inter";
+    font-weight: bold;
+    font-size: 40px;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 10px;
+    justify-content: center;
+}
+
+.upndowndot {
+    animation: upndown 1s infinite;
+}
+
+@keyframes upndown {
+    0%,
+    100% {
+        translate: 0 -10px;
+    }
+    50% {
+        translate: 0 10px;
+    }
+}
+
+.hidden {
+    visibility: hidden;
 }
